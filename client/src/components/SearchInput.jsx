@@ -19,7 +19,7 @@ const SearchInput = () => {
       return;
     }
 
-    const endpoint = `http://localhost:8000/api/products?_search=${search}`;
+    const endpoint = `https://shopease-md4l.onrender.com/api/products?_search=${search}`;
 
     try {
       setLoading(true);

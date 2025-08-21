@@ -35,7 +35,7 @@ const CheckoutForm = ({ orderId, amount, onSuccess, onCancel }) => {
       // Create payment intent
       const token = localStorage.getItem("token");
       const response = await fetch(
-        "http://localhost:8000/api/payment/stripe/create-payment-intent",
+        "https://shopease-md4l.onrender.com/api/payment/stripe/create-payment-intent",
         {
           method: "POST",
           headers: {

@@ -37,7 +37,7 @@ const PaymentSuccess = () => {
 
         // Confirm payment with backend
         const confirmResponse = await fetch(
-          "http://localhost:8000/api/payment/stripe/confirm-payment",
+          "https://shopease-md4l.onrender.com/api/payment/stripe/confirm-payment",
           {
             method: "POST",
             headers: {

@@ -107,7 +107,7 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post(`http://localhost:8000/api/user/register`, {
+      const response = await axios.post(`https://shopease-md4l.onrender.com/api/user/register`, {
         name: clientName,
         email,
         password,

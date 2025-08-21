@@ -1,7 +1,8 @@
 // client/src/constants/index.js
 
 // Base API URL
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://shopease-md4l.onrender.com";
+export const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://shopease-md4l.onrender.com/api";
 
 // Roles
 export const ROLE_USER = "user";

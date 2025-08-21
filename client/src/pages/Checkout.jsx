@@ -24,7 +24,7 @@ const fetchOrderDetails = useCallback(async () => {
 try {
 const token = localStorage.getItem("token");
 const response = await fetch(
-`http://localhost:8000/api/order/user/${orderId}`,
+`https://shopease-md4l.onrender.com/api/order/user/${orderId}`,
 {
 headers: {
 Authorization: `Bearer ${token}`,

@@ -1,7 +1,7 @@
 // server/constants/index.js
 
 // Environment variables
-const SERVER_URL = process.env.SERVER_URL || "http://localhost:8000";
+const SERVER_URL = process.env.SERVER_URL || "https://shopease-md4l.onrender.com";
 const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 
 // Roles

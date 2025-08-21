@@ -50,7 +50,7 @@ const Order = () => {
       setLoading(true);
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://localhost:8000/api/order/my-orders`,
+        `https://shopease-md4l.onrender.com/api/order/my-orders`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
