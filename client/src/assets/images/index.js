@@ -6,7 +6,7 @@ import bannerImgThree from "./banner/slideThree.png";
 // ============== Products Start here ====================
 
 // Year Product
-import ProductOfTheYear from "./products/ProductOfTheYear.webp";
+import productOfTheYear from "./products/productOfTheYear.webp";
 // ============== Products End here ======================
 import paymentCard from "./payment.png";
 import emptyCart from "../images/emptyCart.png";
@@ -34,7 +34,7 @@ export {
   bannerImgThree,
 
   // Year Product
-  ProductOfTheYear,
+  productOfTheYear,
   // ===================== Products End here ==============
   paymentCard,
   emptyCart,
