@@ -14,9 +14,9 @@ const config = {
     API_BASE_URL:
       import.meta.env.VITE_API_BASE_URL || "https://your-api-domain.com",
     CLIENT_BASE_URL:
-      import.meta.env.VITE_CLIENT_BASE_URL || "",
+      import.meta.env.VITE_CLIENT_BASE_URL || "https://shopeaseshop.netlify.app",
     ADMIN_BASE_URL:
-      import.meta.env.VITE_ADMIN_BASE_URL || "",
+      import.meta.env.VITE_ADMIN_BASE_URL || "https://shopeaseshopadmin.netlify.app",
     NODE_ENV: "production",
     DEBUG: false,
     LOG_LEVEL: "error",
