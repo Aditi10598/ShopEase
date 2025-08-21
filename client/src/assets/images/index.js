@@ -34,7 +34,7 @@ export {
   bannerImgThree,
 
   // Year Product
-  productOfTheYear,
+  ProductOfTheYear,
   // ===================== Products End here ==============
   paymentCard,
   emptyCart,
