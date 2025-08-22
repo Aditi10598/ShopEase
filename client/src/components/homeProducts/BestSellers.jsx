@@ -5,7 +5,7 @@ import PreviousArrow from "../PreviousArrow";
 import Title from "../ui/title";
 import ProductCard from "../ProductCard";
 import { getData } from "../../helpers";
-import { API_BASE_URL } from "../../constants";
+import { config } from "../../../config";
 
 const BestSellers = () => {
   const settings = {

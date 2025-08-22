@@ -3,14 +3,14 @@ const ENV = import.meta.env.MODE || "development";
 // Base URLs for different environments
 const config = {
   development: {
-    API_BASE_URL: import.meta.env.VITE_BACKEND_URL || "http://localhost:8000/api",
+    API_BASE_URL: import.meta.env.VITE_BACKEND_URL || "http://localhost:8000",
     CLIENT_BASE_URL: "http://localhost:5173",
     ADMIN_BASE_URL: "http://localhost:5174",
     NODE_ENV: "development",
     DEBUG: true,
   },
   production: {
-    API_BASE_URL: import.meta.env.VITE_BACKEND_URL || "https://shopease-md4l.onrender.com/api",
+    API_BASE_URL: import.meta.env.VITE_BACKEND_URL || "https://shopease-md4l.onrender.com",
     CLIENT_BASE_URL: import.meta.env.VITE_CLIENT_BASE_URL || "https://shopeaseshop.netlify.app",
     ADMIN_BASE_URL: import.meta.env.VITE_ADMIN_BASE_URL || "https://shopeaseshopadmin.netlify.app",
     NODE_ENV: "production",
