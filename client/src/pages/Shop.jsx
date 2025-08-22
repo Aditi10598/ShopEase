@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Container from "../components/Container";
 import ProductsSideNav from "../components/products/ProductsSideNav";
 import PaginationProductList from "../components/products/PaginationProductList";
-import { config } from "../../config";
+import config from "../../config";
 import { getData } from "../helpers";
 
 const Shop = () => {
@@ -23,7 +23,7 @@ const Shop = () => {
   const [itemsPerPage, setItemsPerPage] = useState(12);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const endpoint = `${config?.baseUrl}/api/products`;
+  const endpoint = `${config?.API_BASE_URL}}/api/products`;
 
   // Handle URL parameters for category filtering
   useEffect(() => {
