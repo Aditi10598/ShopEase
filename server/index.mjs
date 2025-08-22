@@ -71,6 +71,13 @@ app.get("/", (req, res) => {
 });
 
 // Auto-pick a free port
-app.listen(PORT, () => {
-  console.log(`✅ Server is running on port ${PORT}`);
+detect(defaultPort).then((port) => {
+  app.listen(port, () => {
+    console.log(`✅ Server is running on port ${port}`);
+    if (port !== defaultPort) {
+      console.log(`⚠️ Port ${defaultPort} was busy, switched to ${port}`);
+    }
+  });
+}).catch((err) => {
+  console.error("❌ Failed to start server:", err);
 });
