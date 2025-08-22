@@ -5,7 +5,7 @@ import PreviousArrow from "../PreviousArrow";
 import Title from "../ui/title";
 import ProductCard from "../ProductCard";
 import { getData } from "../../helpers";
-import { config } from "../../../config";
+import config from "../../../config";
 
 const NewArrivals = () => {
   const settings = {
