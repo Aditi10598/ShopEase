@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getData } from "../../helpers";
-import { config } from "../../../config";
+import { API_BASE_URL } from "../../constants";
 
 const ProductsSideNav = ({ onFilterChange, filters, onClearFilters }) => {
   const [categories, setCategories] = useState([]);
