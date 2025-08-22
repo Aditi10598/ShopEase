@@ -83,7 +83,7 @@ const SignIn = () => {
     }
 
     try {
-      const response = await axios.post(serverUrl + "/user/login", {
+      const response = await axios.post(serverUrl + "/api/user/login", {
         email,
         password,
       });
