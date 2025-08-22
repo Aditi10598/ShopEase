@@ -50,6 +50,7 @@ const userLogin = async (req, res) => {
       await user.save();
 
       const token = createToken(user);
+      
       res.json({
         success: true,
         token,

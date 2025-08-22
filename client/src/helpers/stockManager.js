@@ -8,7 +8,7 @@
  */
 export const processCheckout = async (cartItems, serverUrl) => {
   try {
-    const response = await fetch(`${serverUrl}/checkout`, {
+    const response = await fetch(`/checkout`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const processCheckout = async (cartItems, serverUrl) => {
  */
 export const updateProductStock = async (productId, quantity, serverUrl) => {
   try {
-    const response = await fetch(`${serverUrl}/api/product/update-stock`, {
+    const response = await fetch(`/api/product/update-stock`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

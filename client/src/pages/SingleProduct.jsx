@@ -4,7 +4,6 @@ import Container from "../components/Container";
 import { MdStar, MdFavoriteBorder, MdShare } from "react-icons/md";
 import { motion } from "framer-motion";
 import { getData } from "../helpers/index";
-import { serverUrl } from "../../config";
 
 const SingleProduct = () => {
   const location = useLocation();
@@ -29,7 +28,7 @@ const SingleProduct = () => {
         try {
           // Fetch products from the same category
           const response = await getData(
-            `${serverUrl}/api/products?category=${productInfo.category}&_perPage=8`
+            `/api/products?category=${productInfo.category}&_perPage=8`
           );
 
           if (response?.success && response?.products) {

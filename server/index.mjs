@@ -20,6 +20,7 @@ const allowedOrigins = [
   "http://10.0.2.2:8081",
   "http://10.0.2.2:8000",
   "https://shopeaseshop.netlify.app",
+  "https://shopeaseshopadmin.netlify.app",
 ].filter(Boolean);
 
 console.log("Allowed CORS Origins:", allowedOrigins);
@@ -70,13 +71,6 @@ app.get("/", (req, res) => {
 });
 
 // Auto-pick a free port
-detect(defaultPort).then((port) => {
-  app.listen(port, () => {
-    console.log(`✅ Server is running on port ${port}`);
-    if (port !== defaultPort) {
-      console.log(`⚠️ Port ${defaultPort} was busy, switched to ${port}`);
-    }
-  });
-}).catch((err) => {
-  console.error("❌ Failed to start server:", err);
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
 });

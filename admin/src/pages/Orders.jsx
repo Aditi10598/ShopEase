@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import Title from "../components/ui/title";
 import SkeletonLoader from "../components/SkeletonLoader";
-import { serverUrl } from "../../config";
+
 import {
   FaEdit,
   FaTrash,
@@ -48,7 +48,7 @@ const Orders = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem("token");
-      const response = await fetch(`${serverUrl}/api/order/list`, {
+      const response = await fetch(`/api/order/list`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -78,7 +78,7 @@ const Orders = () => {
         updateData.paymentStatus = paymentStatus;
       }
 
-      const response = await fetch(`${serverUrl}/api/order/update-status`, {
+      const response = await fetch(`/api/order/update-status`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const Orders = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`${serverUrl}/api/order/delete`, {
+      const response = await fetch(`/api/order/delete`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
