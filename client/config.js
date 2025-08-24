@@ -10,7 +10,7 @@ const config = {
     DEBUG: true,
   },
   production: {
-    API_BASE_URL: import.meta.env.VITE_BACKEND_URL || "https://shopease-md4l.onrender.com/api",
+    API_BASE_URL: import.meta.env.VITE_API_BASE_URL|| "https://shopease-md4l.onrender.com/api",
     CLIENT_BASE_URL: import.meta.env.VITE_CLIENT_BASE_URL || "https://shopeaseshop.netlify.app",
     ADMIN_BASE_URL: import.meta.env.VITE_ADMIN_BASE_URL || "https://shopeaseshopadmin.netlify.app",
     NODE_ENV: "production",
