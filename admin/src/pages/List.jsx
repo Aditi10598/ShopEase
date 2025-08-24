@@ -60,7 +60,7 @@ const List = ({ token }) => {
   const fetchList = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(serverUrl + "/api/product/list");
+      const response = await axios.get(serverUrl + "/product/list");
       const data = response?.data;
 
       if (data?.success) {
@@ -80,8 +80,8 @@ const List = ({ token }) => {
   const fetchCategoriesAndBrands = async () => {
     try {
       const [categoriesRes, brandsRes] = await Promise.all([
-        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/category`),
-        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/brand`),
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/category`),
+        fetch(`${import.meta.env.VITE_API_BASE_URL}/brand`),
       ]);
 
       const categoriesData = await categoriesRes.json();
@@ -260,7 +260,7 @@ const List = ({ token }) => {
       });
 
       const response = await axios.put(
-        `${serverUrl}/api/product/update/${editingProduct._id}`,
+        `${serverUrl}/product/update/${editingProduct._id}`,
         data,
         {
           headers: {
@@ -292,7 +292,7 @@ const List = ({ token }) => {
     try {
       setSubmitting(true);
       const response = await axios.post(
-        serverUrl + "/api/product/remove",
+        serverUrl + "/product/remove",
         { _id: deletingProduct._id },
         { headers: { token } }
       );

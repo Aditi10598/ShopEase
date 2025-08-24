@@ -34,7 +34,7 @@ const Brands = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/api/brand`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/brand`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -107,8 +107,8 @@ const Brands = () => {
       }
 
       const url = editingBrand
-        ? `${import.meta.env.VITE_BACKEND_URL}/api/brand/${editingBrand._id}`
-        : `${import.meta.env.VITE_BACKEND_URL}/api/brand`;
+        ? `${import.meta.env.VITE_API_BASE_URL}/api/brand/${editingBrand._id}`
+        : `${import.meta.env.VITE_API_BASE_URL}/api/brand`;
 
       const response = await fetch(url, {
         method: editingBrand ? "PUT" : "POST",
@@ -147,7 +147,7 @@ const Brands = () => {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/brand/${brandId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/brand/${brandId}`,
         {
           method: "DELETE",
           headers: {

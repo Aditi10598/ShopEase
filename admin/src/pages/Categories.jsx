@@ -32,7 +32,7 @@ const Categories = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/api/category`,
+        `${import.meta.env.VITE_API_BASE_URL}/category`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -102,10 +102,10 @@ const Categories = () => {
       }
 
       const url = editingCategory
-        ? `${import.meta.env.VITE_BACKEND_URL}/api/category/${
+        ? `${import.meta.env.VITE_API_BASE_URL}/category/${
             editingCategory._id
           }`
-        : `${import.meta.env.VITE_BACKEND_URL}/api/category`;
+        : `${import.meta.env.VITE_API_BASE_URL}/category`;
 
       const response = await fetch(url, {
         method: editingCategory ? "PUT" : "POST",
@@ -144,7 +144,7 @@ const Categories = () => {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_URL}/category/${categoryId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/category/${categoryId}`,
         {
           method: "DELETE",
           headers: {

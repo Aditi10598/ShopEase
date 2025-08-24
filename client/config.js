@@ -3,7 +3,7 @@ const ENV = import.meta.env.MODE || "development";
 // Base URLs for different environments
 const config = {
   development: {
-    API_BASE_URL: import.meta.env.VITE_BACKEND_URL || "http://localhost:8000",
+    API_BASE_URL: import.meta.env.VITE_API_BASE_URL || "http://localhost:8000",
     CLIENT_BASE_URL: "http://localhost:5173",
     ADMIN_BASE_URL: "http://localhost:5174",
     NODE_ENV: "development",
