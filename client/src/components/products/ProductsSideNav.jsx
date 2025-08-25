@@ -12,7 +12,7 @@ const ProductsSideNav = ({ onFilterChange, filters, onClearFilters }) => {
     // Fetch categories and brands from products
     const fetchFilterOptions = async () => {
       try {
-        const data = await getData(`${config?.baseUrl}/api/products`);
+        const data = await getData(`${config?.baseUrl}/products`);
         const products = data?.products || [];
 
         // Extract unique categories

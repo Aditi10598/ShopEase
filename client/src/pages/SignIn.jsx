@@ -46,7 +46,7 @@ const SignIn = () => {
   // Function to fetch user orders and update count
   const fetchUserOrderCount = async (token) => {
     try {
-      const response = await fetch(`${serverUrl}/api/order/my-orders`, {
+      const response = await fetch(`${serverUrl}/order/my-orders`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -83,7 +83,7 @@ const SignIn = () => {
     }
 
     try {
-      const response = await axios.post(serverUrl + "/api/user/login", {
+      const response = await axios.post(serverUrl + "/user/login", {
         email,
         password,
       });

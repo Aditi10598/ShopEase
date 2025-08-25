@@ -35,7 +35,7 @@ const AddressModal = ({ isOpen, close, userId, token, onAddressesChange }) => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `${serverUrl}/api/user/${userId}/addresses`,
+        `${serverUrl}/user/${userId}/addresses`,
         { headers: { token } }
       );
 

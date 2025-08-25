@@ -21,7 +21,7 @@ api.interceptors.request.use((config) => {
 export const authService = {
   adminLogin: async (credentials) => {
     try {
-      const response = await api.post("/api/user/admin", credentials);
+      const response = await api.post("/user/admin", credentials);
       return response.data;
     } catch (error) {
       return {
@@ -33,7 +33,7 @@ export const authService = {
 
   userLogin: async (credentials) => {
     try {
-      const response = await api.post("/api/user/login", credentials);
+      const response = await api.post("/user/login", credentials);
       return response.data;
     } catch (error) {
       return {
@@ -45,7 +45,7 @@ export const authService = {
 
   userRegister: async (userData) => {
     try {
-      const response = await api.post("/api/user/register", userData);
+      const response = await api.post("/user/register", userData);
       return response.data;
     } catch (error) {
       return {
@@ -57,7 +57,7 @@ export const authService = {
 
   getUserProfile: async () => {
     try {
-      const response = await api.get("/api/user/profile");
+      const response = await api.get("/user/profile");
       return response.data;
     } catch (error) {
       return {
