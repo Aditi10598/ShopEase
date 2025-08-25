@@ -44,7 +44,7 @@ const Users = ({ token }) => {
 
         // If no localStorage data, fetch from server
         try {
-          const response = await axios.get(serverUrl + "/api/user/profile", {
+          const response = await axios.get(serverUrl + "/user/profile", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -71,7 +71,7 @@ const Users = ({ token }) => {
     try {
       setLoading(true);
 
-      const response = await axios.get(serverUrl + "/api/user/users", {
+      const response = await axios.get(serverUrl + "/user/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = response?.data;
@@ -131,7 +131,7 @@ const Users = ({ token }) => {
       try {
         setLoading(true);
         const response = await axios.post(
-          serverUrl + "/api/user/remove",
+          serverUrl + "/user/remove",
           { _id },
           { headers: { token } }
         );

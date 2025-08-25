@@ -1,8 +1,8 @@
 // server/constants/index.js
 
 // Environment variables
-const SERVER_URL = process.env.SERVER_URL || "https://shopease-md4l.onrender.com";
-const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+const SERVER_URL = process.env.SERVER_URL || "https://shopease-md4l.onrender.com/api";
+const CLIENT_URL = process.env.CLIENT_URL || "https://shopeaseshop.netlify.app";
 
 // Roles
 const USER_ROLE = "user";
