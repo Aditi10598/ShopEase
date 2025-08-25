@@ -57,25 +57,16 @@ const List = ({ token }) => {
     image3: null,
     image4: null,
   });
-  const fetchList = async () => {
+   const fetchList = async () => {
     try {
-      setLoading(true);
-      const response = await axios.get(serverUrl + "/product/list");
-      const data = response?.data;
-
-      if (data?.success) {
-        setList(data?.products);
-      } else {
-        toast.error(data?.message);
-      }
+      const response = await axios.get(`${serverUrl}/product/list`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setList(response.data.products || []);
     } catch (error) {
-      console.log("Product List fetching error", error?.message);
-      toast.error(error?.message);
-    } finally {
-      setLoading(false);
+      console.error("Error fetching products:", error);
     }
   };
-
   // Fetch categories and brands for edit modal
   const fetchCategoriesAndBrands = async () => {
     try {

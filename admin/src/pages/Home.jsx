@@ -24,7 +24,7 @@ const Home = () => {
       setStats((prev) => ({ ...prev, loading: true, error: null }));
 
       // Fetch real data from server APIs
-      const response = await axios.get(`${serverUrl}/api/dashboard/stats`, {
+      const response = await axios.get(`${serverUrl}/dashboard/stats`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

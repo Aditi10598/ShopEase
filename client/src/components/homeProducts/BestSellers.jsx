@@ -45,7 +45,7 @@ const BestSellers = () => {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const endpoint = `${config?.baseUrl}/api/products?_type=best_sellers`;
+  const endpoint = `${config?.baseUrl}/products?_type=best_sellers`;
 
   useEffect(() => {
     const getProducts = async () => {

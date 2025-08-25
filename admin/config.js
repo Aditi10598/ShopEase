@@ -4,7 +4,7 @@ const ENV = import.meta.env.MODE || "development";
 
 const config = {
   development: {
-    API_BASE_URL: "https://shopease-md4l.onrender.com",
+    API_BASE_URL: "https://shopease-md4l.onrender.com/api",
     CLIENT_BASE_URL: "http://localhost:5173",
     ADMIN_BASE_URL: "http://localhost:5174",
     NODE_ENV: "development",
@@ -13,7 +13,7 @@ const config = {
   },
   production: {
     API_BASE_URL:
-      import.meta.env.VITE_API_BASE_URL || "https://your-api-domain.com",
+      import.meta.env.VITE_API_BASE_URL || "https://your-api-domain.com/api",
     CLIENT_BASE_URL:
       import.meta.env.VITE_CLIENT_BASE_URL || "https://orebiclient.reactbd.com",
     ADMIN_BASE_URL:
