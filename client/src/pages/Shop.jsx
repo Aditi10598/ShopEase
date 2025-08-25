@@ -23,7 +23,7 @@ const Shop = () => {
   const [itemsPerPage, setItemsPerPage] = useState(12);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const endpoint = `${config?.API_BASE_URL}}/api/products`;
+  const endpoint = `${config?.API_BASE_URL}/products`;
 
   // Handle URL parameters for category filtering
   useEffect(() => {

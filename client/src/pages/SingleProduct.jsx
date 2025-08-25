@@ -28,7 +28,7 @@ const SingleProduct = () => {
         try {
           // Fetch products from the same category
           const response = await getData(
-            `/api/products?category=${productInfo.category}&_perPage=8`
+            `/products?category=${productInfo.category}&_perPage=8`
           );
 
           if (response?.success && response?.products) {

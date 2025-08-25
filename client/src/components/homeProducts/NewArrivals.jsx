@@ -45,7 +45,7 @@ const NewArrivals = () => {
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const endpoint = `${config?.baseUrl}/api/products?_type=new_arrivals`;
+  const endpoint = `${config?.baseUrl}/products?_type=new_arrivals`;
 
   useEffect(() => {
     const getProducts = async () => {

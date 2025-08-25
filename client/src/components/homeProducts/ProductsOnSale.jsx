@@ -11,7 +11,7 @@ const ProductsOnSale = () => {
     const fetchOnSaleProducts = async () => {
       try {
         // Fetch products that are on sale from the database
-        const response = await getData("/api/products");
+        const response = await getData("/products");
         if (response?.success) {
           // Filter products that are on sale
           const onSaleProducts = response.data.filter(

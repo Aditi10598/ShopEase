@@ -45,7 +45,7 @@ const SpecialOffers = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   // const endpoint = "https://shopease-md4l.onrender.com/products/?_type=offers";
-  const endpoint = `${config?.baseUrl}/api/products?offer=true`;
+  const endpoint = `${config?.baseUrl}/products?offer=true`;
 
   useEffect(() => {
     const getProducts = async () => {
